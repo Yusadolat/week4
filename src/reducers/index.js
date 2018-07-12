@@ -1,11 +1,14 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form'
 
 // calling the default reducer to create a link
-import defaultReducer from './default-reducer';
+import numbers from './numbers';
+
 
 const rootReducers = combineReducers({
-    // add reducer files references here
-    default: defaultReducer
+    numbers,
+    form: formReducer
+    
 });
 
 export default rootReducers;

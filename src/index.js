@@ -12,7 +12,7 @@ import ReduxPromise from 'redux-promise';
 
 const store = createStore(
     reducers,
-    applyMiddleware(logger, ReduxPromise)
+    applyMiddleware(ReduxPromise)
 );
 
 ReactDOM.render(

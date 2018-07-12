@@ -1,12 +1,21 @@
-export const FETCH_DATA = 'fetch_data';
+export const CHANGE_NUMBER = 'change_number';
+export const ADD_TWO = 'add_two';
 
 // default function to display redux action format
-export function defaultFunction() {
-    let testVar = 'Hello';
+export function addOne() {
 
     // action object format being return to a reducer
     return {
-        type: FETCH_DATA,
-        payload: testVar
+        type: CHANGE_NUMBER,
+        payload: 1
+    }
+}
+
+export function addTwo() {
+
+    // action object format being return to a reducer
+    return {
+        type: ADD_TWO,
+        payload: 2
     }
 }

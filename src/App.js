@@ -1,31 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-import { connect } from 'react-redux';
-import { defaultFunction } from './actions';
+import './App.css';
+import Register from './components/Register'
+import Login from './components/Login';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
-
   componentDidMount() {
     // call default function to display redux operation
-    this.props.defaultFunction();
+    
   }
-
   render() {
     return (
-      <div>
-        React Redux Starter Template
-      </div>
+      <BrowserRouter>
+        <div className="app">
+          <Route exact path="/" component={Login}/>
+          <Route path="/signup" component={Register}/>
+        </div>
+      </BrowserRouter>
     );
   }
 }
 
-// function to convert the global state obtained from redux to local props
-function mapStateToProps(state) {
-  return {
-    default: state.default
-  };
-}
-
-export default connect(mapStateToProps, { defaultFunction })(App);
+export default App;
