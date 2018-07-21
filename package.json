@@ -20,6 +20,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.4.8",
+    "babel-core": "^6.26.3"
   }
 }

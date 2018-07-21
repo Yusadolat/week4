@@ -31,7 +31,7 @@ let Login = ({data}) =>{
             <h3>Login</h3>
             <Field name='email' type="email" label="Email" component={renderInput}/>
             <Field name="password" type="password" label="Password" component={renderInput}/>
-            <button type="submit">Submit</button>
+            <button className="btn" type="submit">Submit</button>
             <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
         </form>
     )
